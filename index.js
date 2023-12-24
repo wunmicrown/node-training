@@ -26,6 +26,7 @@ app.post("/signup", (req,res)=>{
     console.log(JSON.stringify(req.body));
     return res.status(200).json({message: 'Signup successful!'})
 })
+
 app.post("/login", multer().none(),  (req,res)=>{
     console.log(req.body.name);
     console.log(JSON.stringify(req.body));
@@ -33,7 +34,6 @@ app.post("/login", multer().none(),  (req,res)=>{
 })
 
 // server.timeout = 120_000;
-
 server.listen(port, () =>{
     console.log(process.env.port);
     console.log(`App is live and running on port ${port}`);
