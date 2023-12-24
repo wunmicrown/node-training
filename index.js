@@ -7,6 +7,7 @@ const express = require('express');
 const multer = require("multer");
 
 // Multer for form-data and file uploads;
+
 const app = express();
 const port = process.env.port || 4400;
 
@@ -14,7 +15,6 @@ const server =http.createServer(app);
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-
 app.get('/', (req, res) =>{
     return res.status(200).json({message: 'Tada!'})
 })
