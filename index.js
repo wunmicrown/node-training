@@ -15,6 +15,7 @@ const server =http.createServer(app);
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+
 app.get('/', (req, res) =>{
     return res.status(200).json({message: 'Tada!'})
 })
@@ -25,7 +26,6 @@ app.post("/signup", (req,res)=>{
     console.log(JSON.stringify(req.body));
     return res.status(200).json({message: 'Signup successful!'})
 })
-
 app.post("/login", multer().none(),  (req,res)=>{
     console.log(req.body.name);
     console.log(JSON.stringify(req.body));
