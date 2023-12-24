@@ -33,7 +33,7 @@ app.post("/login", multer().none(),  (req,res)=>{
     return res.status(200).json({message: 'Login successful!'})
 })
 
-// server.timeout = 120000;
+// server.timeout = 120_000;
 
 server.listen(port, () =>{
     console.log(process.env.port);
